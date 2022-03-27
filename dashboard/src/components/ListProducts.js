@@ -1,26 +1,32 @@
 import React from 'react';
 import ChartRow from './ChartRow';
+import { useEffect, useState } from 'react';
 
-let tableRowsData = [
-    {
-        Title: 'Billy Elliot ',
-        Length: '123',
-        Rating: '5',
-        Categories: ['Drama','Comedia'],
-        Awards: 2
-    },
-    {
-        Title: 'Alicia en el país de las maravillas',
-        Length: '142',
-        Rating: '4.8',
-        Categories: ['Drama','Acción','Comedia'],
-        Awards: 3
-    },
-    
-]
 
 
 function ListProducts (){
+
+    const [products,setProducts] = useState([]);
+
+
+    useEffect(()=>{
+        fetch('/api/products')
+        .then(response => {
+            return response.json()
+        })
+        .then(data => {
+           
+            console.log(data.products);
+            setProducts(data.products)
+        })
+    },[products])
+
+
+    let productsList = products; 
+
+    
+
+
     return (
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
@@ -29,25 +35,24 @@ function ListProducts (){
                     <table className="table table-bordered" id="dataTable" width="100%" cellSpacing="0">
                         <thead>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                <th>Nombre</th>
+                                <th>Id</th>
+                                <th>Descripcion</th>
+                                <th>Precio</th>
+                                
                             </tr>
                         </thead>
                         <tfoot>
                             <tr>
-                                <th>Título</th>
-                                <th>Duración</th>
-                                <th>Rating</th>
-                                <th>Género</th>
-                                <th>Premios</th>
+                                 <th>Nombre</th>
+                                <th>Id</th>
+                                <th>Descripcion</th>
+                                <th>Precio</th>
                             </tr>
                         </tfoot>
                         <tbody>
                             {
-                            tableRowsData.map( ( row , i) => {
+                            productsList.map( ( row , i) => {
                                 return <ChartRow { ...row} key={i}/>
                             })
                             }
