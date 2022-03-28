@@ -6,7 +6,7 @@ function Cards(){
 
     
     const [cardUsersCount,setCardUsersCount] = useState([]);
-    
+    const [cardTotalProducts, setCardTotalProducts] = useState([]);
 
 
    
@@ -23,7 +23,22 @@ function Cards(){
             setCardUsersCount(data.total)
         })
 
-    },[cardUsersCount])
+    },[cardUsersCount]);
+
+    useEffect(()=>{
+
+        fetch('/api/products')
+        .then(response => {
+            return response.json()
+        })
+        .then(data => {
+           
+            console.log(data);
+            setCardTotalProducts(data.count)
+        });
+
+    },[cardTotalProducts])
+
 
 
     
@@ -31,17 +46,23 @@ function Cards(){
 
    
 
-    let cartUsers = {
-        title:'Users quantity' ,
+    const cartUsers = {
+        title:'Total de usuarios',
         color:'primary',
         cuantity:cardUsersCount,
+        icon:'fa-user-check'
+    };
+
+    const cardTotalProductos = {
+        title:'Total de productos' ,
+        color:'primary',
+        cuantity:cardTotalProducts,
         icon:'fa-user-check'
     }
 
 
 
-
-    let cartProps = [cartUsers]
+    let cartProps = [cartUsers, cardTotalProductos];
 
     return (
     
