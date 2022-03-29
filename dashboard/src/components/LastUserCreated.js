@@ -1,18 +1,46 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
+
 
 function LastUserCreated(){
+
+    const [LastUser,setLastUser] = useState([]);
+
+    useEffect(()=>{
+
+        fetch('/api/users')
+        .then(response => {
+            return response.json()
+        })
+        .then(data => {
+           
+            console.log(data.usuarios.pop());
+            setLastUser(data.usuarios.pop())
+        })
+
+    },[LastUser])
+
+    let user = LastUser
+
+
+
     return(
         <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">
                 <div className="card-header py-3">
-                    <h5 className="m-0 font-weight-bold text-gray-800">Aca va el ultimo usuario</h5>
+                    <h5 className="m-0 font-weight-bold text-gray-800">{user.name + " " + user.lastName}</h5>
+                    
+
+                    
+
                 </div>
                 <div className="card-body">
                     <div className="text-center">
-                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} /*src={imagenFondo} */alt=" Star Wars - Mandalorian "/>
+                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={user.avatar} alt=" Star Wars - Mandalorian "/>
+                        <p>{user.email}</p>
                     </div>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, consequatur explicabo officia inventore libero veritatis iure voluptate reiciendis a magnam, vitae, aperiam voluptatum non corporis quae dolorem culpa citationem ratione aperiam voluptatum non corporis ratione aperiam voluptatum quae dolorem culpa ratione aperiam voluptatum?</p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">View movie detail</a>
+                    
+                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver este usuario</a>
                 </div>
             </div>
         </div>
