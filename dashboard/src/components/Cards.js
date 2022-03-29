@@ -7,7 +7,7 @@ function Cards(){
     
     const [cardUsersCount,setCardUsersCount] = useState([]);
     const [cardTotalProducts, setCardTotalProducts] = useState([]);
-
+    const [cardTotalCategories,setCardTotalCategories] = useState([]);
 
    
 
@@ -37,7 +37,29 @@ function Cards(){
             setCardTotalProducts(data.count)
         });
 
-    },[cardTotalProducts])
+    },[cardTotalProducts]);
+
+    useEffect(()=>{
+
+        fetch('/api/products')
+        .then(response => {
+            return response.json()
+        })
+        .then(data => {
+           
+            let count = 0;
+
+            for(let i=0;i<data.countByCategory.length;i++){
+                count++
+            }
+
+            setCardTotalCategories(count)
+        });
+
+    },[cardTotalCategories]);
+
+
+    
 
 
 
@@ -58,11 +80,19 @@ function Cards(){
         color:'primary',
         cuantity:cardTotalProducts,
         icon:'fa-user-check'
+    };
+
+    const cardTotalCategorias = {
+        title:'Total de categorias' ,
+        color:'primary',
+        cuantity:cardTotalCategories,
+        icon:'fa-user-check'
     }
 
 
 
-    let cartProps = [cartUsers, cardTotalProductos];
+
+    let cartProps = [cartUsers, cardTotalProductos,cardTotalCategorias];
 
     return (
     
