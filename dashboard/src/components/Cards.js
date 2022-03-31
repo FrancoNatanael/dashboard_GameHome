@@ -1,5 +1,6 @@
 import React from 'react';
-import SmallCard from './SmallCard';
+//import SmallCard from './SmallCard';
+import Tarjetas from './Tarjetas';
 import { useEffect, useState } from 'react';
 
 function Cards(){
@@ -100,7 +101,7 @@ function Cards(){
             
            {cartProps.map( (cart, i) => {
 
-                return <SmallCard {...cart} key={i}/>
+                return <Tarjetas {...cart} key={i}/>
             
             })}
 

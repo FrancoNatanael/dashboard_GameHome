@@ -10,8 +10,9 @@ function App() {
     <React.Fragment>
      
       <div id="wrapper">
-        
+          
           <SideBar />
+          
         </div>
     </React.Fragment>
   );
