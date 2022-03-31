@@ -14,7 +14,7 @@ function LastUserCreated(){
         })
         .then(data => {
            
-            console.log(data.usuarios.pop());
+            
             setLastUser(data.usuarios.pop())
         })
 

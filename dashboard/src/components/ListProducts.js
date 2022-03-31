@@ -28,6 +28,8 @@ function ListProducts (){
 
 
     return (
+
+        
         /* <!-- DataTales Example --> */
         <div className="card shadow mb-4">
             <div className="card-body">
@@ -44,13 +46,11 @@ function ListProducts (){
                         </thead>
                         <tfoot>
                             <tr>
-                                 <th>Nombre</th>
-                                <th>Id</th>
-                                <th>Descripcion</th>
-                                <th>Precio</th>
+                                 
                             </tr>
                         </tfoot>
                         <tbody>
+                        {productsList.length === 0 && <p>Cargando...</p>}
                             {
                             productsList.map( ( row , i) => {
                                 return <ChartRow { ...row} key={i}/>

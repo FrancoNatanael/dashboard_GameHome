@@ -2,6 +2,7 @@ import React from 'react';
 //import SmallCard from './SmallCard';
 import Tarjetas from './Tarjetas';
 import { useEffect, useState } from 'react';
+import { BsFillAlarmFill } from "react-icons/bs";
 
 function Cards(){
 
@@ -71,23 +72,23 @@ function Cards(){
 
     const cartUsers = {
         title:'Total de usuarios',
-        color:'primary',
+        color:'Light',
         cuantity:cardUsersCount,
-        icon:'fa-user-check'
+        icon:'person-circle.svg'
     };
 
     const cardTotalProductos = {
         title:'Total de productos' ,
         color:'primary',
         cuantity:cardTotalProducts,
-        icon:'fa-user-check'
+        icon:'laptop.svg'
     };
 
     const cardTotalCategorias = {
         title:'Total de categorias' ,
         color:'primary',
         cuantity:cardTotalCategories,
-        icon:'fa-user-check'
+        icon:'tag-fill.svg'
     }
 
 
@@ -102,7 +103,7 @@ function Cards(){
            {cartProps.map( (cart, i) => {
 
                 return <Tarjetas {...cart} key={i}/>
-            
+               
             })}
 
         </div>

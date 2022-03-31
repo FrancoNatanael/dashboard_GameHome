@@ -38,7 +38,7 @@ function Header(){
 						<li className="nav-item dropdown no-arrow">
 							<a className="nav-link dropdown-toggle" href="/" id="userDropdown">
 								<span className="mr-2 d-none d-lg-inline text-gray-600 small">¡Hola, Admin!</span>
-								<img className="img-profile rounded-circle" src="logo-174px.png" alt="Jordan Walke - Creador de React" width="60"/>
+								
 							</a>
 						</li>
 

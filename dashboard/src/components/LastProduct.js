@@ -6,32 +6,34 @@ function LastProduct(){
 
     useEffect(()=>{
 
-        fetch('api/products')
+        fetch('/api/products')
         .then(response => {
             return response.json()
         })
         .then(data => {
            
-            console.log(data.products.pop());
+           
+
+           
             setLastProduct(data.products.pop())
         })
 
     },[lastProduct])
 
 
-    let product = lastProduct
+    /*let product = lastProduct*/
     
     return(
         <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">
                 <div className="card-header py-3">
-                    <h5 className="m-0 font-weight-bold text-gray-800">{product.Name}</h5>
+                    <h5 className="m-0 font-weight-bold text-gray-800">{lastProduct.Name}</h5>
                 </div>
                 <div className="card-body">
                     <div className="text-center">
-                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={product.Image} alt=" Star Wars - Mandalorian "/>
+                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={lastProduct.Image} alt="Product"/>
                     </div>
-                    <p>{product.Description}</p>
+                    <p>{lastProduct.Description}</p>
                     <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver más</a>
                 </div>
             </div>

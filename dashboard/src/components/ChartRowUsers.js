@@ -1,0 +1,18 @@
+import React from 'react';
+
+
+function ChartRowUsers(props){
+    return (
+                <tr>
+                    <td>{props.name}</td>
+                    <td>{props.lastName}</td>
+                    <td>{props.email}</td>
+                    
+                    
+                </tr>
+            )
+    }
+    
+        
+
+export default ChartRowUsers;

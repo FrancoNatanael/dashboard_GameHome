@@ -1,7 +1,6 @@
 import React from 'react';
 import Cards from './Cards'
 import LastProduct from './LastProduct';
-import LastUserCreated from './LastUserCreated';
 import ListProducts from './ListProducts';
 import ListUsers from './ListUsers';
 import PrincipalContent from './ContentWrapper'
@@ -11,12 +10,12 @@ function SideBar(){
     return(
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
-            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar" style={{background: "#5529ac"}}>
 
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                     <div className="sidebar-brand-icon">
-                        <img className="w-100" /*src={image}*/ alt="Digital House"/>
+                        <img className="w-100" /*src={image}*/ alt="Game Home"/>
                     </div>
                 </a>
 
@@ -83,7 +82,7 @@ function SideBar(){
                    
                     
                
-                {/*<Route path="/ListUsers" component ={<ListUsers/>}/>*/}
+                <Route path="/ListUsers" element ={<ListUsers/>}/>
                     
                
                 {/*<Route component={NotFound} />*/}

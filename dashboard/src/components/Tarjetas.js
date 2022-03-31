@@ -9,12 +9,16 @@ function Tarjetas(props){
             
 <CardGroup>
   <Card>
-    <Card.Img variant="top" src="logo-174px.png" />
+    
     <Card.Body>
         
-      <Card.Title>{props.title}</Card.Title>
+      <Card.Title>{props.title} <img src ={props.icon} alt="Mi" /></Card.Title>
       <Card.Text>
       <div className="h5 mb-0 font-weight-bold text-gray-800">{props.cuantity}</div>
+      
+      
+
+
       </Card.Text>
     </Card.Body>
    
@@ -28,7 +32,7 @@ function Tarjetas(props){
         title: 'No Title',
         color: 'success',
         cuantity: 'No cuatity',
-        img: 'logo-174px.png'
+        icon: "bi bi-person-circle"
     }
     
     /* PROPTYPES */

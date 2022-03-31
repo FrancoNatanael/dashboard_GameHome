@@ -15,7 +15,6 @@ function PrincipalContent(){
       <LastProduct/>
       <Categories/>
       <LastUserCreated/>
-      <ListProducts/>
       <Footer />
       </React.Fragment>
     )
