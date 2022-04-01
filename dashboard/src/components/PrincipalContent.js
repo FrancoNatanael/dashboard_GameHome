@@ -7,6 +7,8 @@ import Categories from './Categories';
 import LastUserCreated from './LastUserCreated';
 import ListProducts from './ListProducts';
 
+
+
 function PrincipalContent(){
     return(
     <React.Fragment>

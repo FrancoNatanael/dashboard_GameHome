@@ -28,6 +28,7 @@ function LastUserCreated(){
         <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">
                 <div className="card-header py-3">
+                <span className="m-0 font-weight-bold text-gray-800">Ultimo usuario registrado</span>
                     <h5 className="m-0 font-weight-bold text-gray-800">{user.name + " " + user.lastName}</h5>
                     
 

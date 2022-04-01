@@ -1,10 +1,14 @@
 import React from 'react';
 import ChartRow from './ChartRow';
 import { useEffect, useState } from 'react';
+import Carousel from './Carousel';
 
 
 
 function ListProducts (){
+
+
+     
 
     const [products,setProducts] = useState([]);
 
@@ -31,6 +35,9 @@ function ListProducts (){
 
         
         /* <!-- DataTales Example --> */
+       
+      <div>
+         
         <div className="card shadow mb-4">
             <div className="card-body">
                 <div className="table-responsive">
@@ -62,7 +69,7 @@ function ListProducts (){
                 </div>
             </div>
         </div>
-
+       </div>                   
     )
 }
 

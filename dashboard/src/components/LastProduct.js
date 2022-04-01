@@ -1,5 +1,5 @@
 import React from 'react';
-import { useEffect,useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 function LastProduct(){
 
     const [lastProduct,setLastProduct] = useState([]);
@@ -24,9 +24,15 @@ function LastProduct(){
     /*let product = lastProduct*/
     
     return(
+   
+    
+        
         <div className="col-lg-6 mb-4">
+            
             <div className="card shadow mb-4">
                 <div className="card-header py-3">
+                    <span className="m-0 font-weight-bold text-gray-800">Ultimo producto creado</span>
+                    
                     <h5 className="m-0 font-weight-bold text-gray-800">{lastProduct.Name}</h5>
                 </div>
                 <div className="card-body">
@@ -38,6 +44,8 @@ function LastProduct(){
                 </div>
             </div>
         </div>
+        
+   
     )
 }
 

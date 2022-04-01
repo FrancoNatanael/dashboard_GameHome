@@ -4,40 +4,41 @@ import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar'
-
+import { FcSearch } from "react-icons/fc"
+import Css from '../assets/css/styles.css'
 
 function Header(){
     return(
         <React.Fragment>
 				{/*<!-- Topbar -->*/}
-				<nav className="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+				<nav className="navbar navbar-expand topbar mb-4 static-top shadow" id="nav">
 
 					{/*<!-- Sidebar Toggle (Topbar) -->*/}
-					<button id="sidebarToggleTop" className="btn btn-link d-md-none rounded-circle mr-3">
-						<i className="fa fa-bars"></i>
-					</button>
+					
 
 					{/*<!-- Topbar Navbar -->*/}
-					<ul className="navbar-nav ml-auto">
-					<Navbar bg="light" expand="lg">
+					<Navbar bg="light" expand="lg"id='search'  >
 					<Container fluid>
-					<Form className="d-flex">
+					<Form className="d-flex " >
 						<FormControl
 						type="search"
-						placeholder="Search"
+						placeholder="Buscar"
 						className="me-2"
 						aria-label="Search"
+						
 						/>
-						<Button variant="warning">Search</Button>
+						<Button variant="warning" id="side"><FcSearch/></Button>
 					</Form>
 					</Container>
 					</Navbar>
+					<ul className="navbar-nav ml-auto ">
+					
 					
 
 						{/*<!-- Nav Item - User Information -->*/}
 						<li className="nav-item dropdown no-arrow">
 							<a className="nav-link dropdown-toggle" href="/" id="userDropdown">
-								<span className="mr-2 d-none d-lg-inline text-gray-600 small">¡Hola, Admin!</span>
+								<span className="mr-2 d-none d-lg-inline text-gray-600 small" id='letra'>¡Hola, Admin!</span>
 								
 							</a>
 						</li>
