@@ -1,17 +1,16 @@
 import React from "react";
-import Table from 'react-bootstrap/Table';
+
+
 function CardCategory(props) {
     return(
-        <div>
-            <Table striped bordered hover size="sm">
-    
+        
                     <tr>
-                        <th>{props.category}</th>
-                        <th>{props.count}</th>
+                        <td>{props.category}</td>
+                        <td>{props.count}</td>
+                        
                     </tr>
-                
-            </Table>
-            </div>
+                   
+                   
     )
 }
 

@@ -28,7 +28,7 @@ function ListUsers (){
 
 
     return (
-        /* <!-- DataTales Example --> */
+        
         
         <div className="card shadow mb-4">
             <div className="card-body">
@@ -41,9 +41,7 @@ function ListUsers (){
                                 <th>Mail</th>
                             </tr>
                         </thead>
-                        <tfoot>
-                           
-                        </tfoot>
+                     
                         <tbody>
                             {
                             usersList.map( ( row , i) => {

@@ -1,5 +1,8 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import {Link} from 'react-router-dom';
+
+
 
 
 function LastUserCreated(){
@@ -41,11 +44,20 @@ function LastUserCreated(){
                         <p>{user.email}</p>
                     </div>
                     
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver este usuario</a>
+                    <Link className="nav-link" to="/ListUsers">
+                        
+                        <p className="btn btn-danger text-center" id='actions'>Ver todos</p>
+                        
+                    </Link>
                 </div>
             </div>
         </div>
+
+        
+        
     )
+    
+ 
 }
 
 export default LastUserCreated;

@@ -2,10 +2,11 @@ import React from 'react';
 import Cards from './Cards'
 import LastProduct from './LastProduct';
 import ListProducts from './ListProducts';
+import Categories from './Categories';
 import ListUsers from './ListUsers';
 import PrincipalContent from './ContentWrapper'
 import {Link, Route, Routes} from 'react-router-dom';
-import { FcCustomerSupport, FcBarChart, FcSearch, FcSelfServiceKiosk, FcHome } from "react-icons/fc";
+import { FcCustomerSupport, FcBarChart, FcSearch, FcSelfServiceKiosk, FcHome,  FcDataBackup} from "react-icons/fc";
 import Logo from '../assets/image/logo-174px.ico'
 
 
@@ -39,38 +40,44 @@ function SideBar(){
                         <strong id='inicio'>INICIO</strong></Link>
                 </li>
 
-                {/*<!-- Divider -->*/}
                 <hr className="sidebar-divider"/>
 
-                {/*<!-- Heading -->*/}
+              
                 <div className="sidebar-heading">Opciones</div>
 
-                {/*<!-- Nav Item - Pages -->*/}
-                <li className="nav-item">
-                <Link className="nav-link" to="/ListProducts">
-                        <i className="fas fa-fw fa-folder"></i>
-                        <FcSearch/>
-                        <span id='actions'>Productos</span>
-                    </Link>
-                </li>
-
-                {/*<!-- Nav Item - Charts -->*/}
                 <li className="nav-item">
                     <Link className="nav-link" to="/Totals">
                         <i className="fas fa-fw fa-chart-area"></i>
                         <FcBarChart/>
                         <span id='actions'>Totales</span></Link>
                 </li>
+                
+                <li className="nav-item">
+                <Link className="nav-link" to="/ListProducts">
+                        <i className="fas fa-fw fa-folder"></i>
+                        <FcSearch/>
+                        <span id='actions'>Lista de productos</span>
+                    </Link>
+                </li>
 
-                {/*<!-- Nav Item - Tables -->*/}
+                
+                
+
+               
                 <li className="nav-item nav-link">
                 <Link className="nav-link" to="/LastProduct">
                         <i className="fas fa-fw fa-table"></i>
                         <FcSelfServiceKiosk/>
-                        <span id='actions'>Ultimo producto </span></Link>
+                        <span id='actions'>Último producto</span></Link>
+                </li>
+                <li className="nav-item nav-link">
+                    <Link className="nav-link" to="/Categories">
+                        <i className="fas fa-search"></i>
+                        < FcDataBackup/>
+                        <span id='actions'>Categorías</span>
+                    </Link>
                 </li>
                 
-                {/*<!-- Buscador -->*/}
                 <li className="nav-item nav-link">
                     <Link className="nav-link" to="/ListUsers">
                         <i className="fas fa-search"></i>
@@ -94,7 +101,7 @@ function SideBar(){
                    
                 <Route path="/LastProduct" element={  <LastProduct/>}/>
                    
-                    
+                <Route path="/Categories" element={  <Categories/>}/>     
                
                 <Route path="/ListUsers" element ={<ListUsers/>}/>
                     

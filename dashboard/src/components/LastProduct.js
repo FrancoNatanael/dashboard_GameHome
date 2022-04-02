@@ -40,7 +40,7 @@ function LastProduct(){
                         <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={lastProduct.Image} alt="Product"/>
                     </div>
                     <p>{lastProduct.Description}</p>
-                    <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">Ver más</a>
+                    <a className="btn btn-danger text-center" target="_blank" rel="nofollow" href="/">Ver más</a>
                 </div>
             </div>
         </div>
