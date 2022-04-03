@@ -5,14 +5,14 @@ import CardGroup from 'react-bootstrap/CardGroup'
 function Tarjetas(props){
 
     return(
-        <div className="col-md-4 mb-4">
+        <div className="col-md-4 mb-4" >
             
 <CardGroup>
   <Card>
     
     <Card.Body>
         
-      <Card.Title>{props.title} <img src ={props.icon} alt="Mi" /></Card.Title>
+      <Card.Title style={{borderBottom: "1px solid gray"}}>{props.title} <img src ={props.icon} alt="Mi" /></Card.Title>
       <Card.Text>
       <div className="h5 mb-0 font-weight-bold text-gray-800">{props.cuantity}</div>
       

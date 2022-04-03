@@ -8,13 +8,8 @@ function Header(){
 				<nav className="navbar navbar-expand topbar mb-4 static-top shadow" id="nav">
 
 					
-					
-
-					
 					<ul className="navbar-nav ml-auto ">
-					
-					
-
+				
 					
 						<li className="nav-item dropdown no-arrow">
 							<a className="nav-link dropdown-toggle" href="/" id="userDropdown">

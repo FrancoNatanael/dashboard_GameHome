@@ -59,16 +59,7 @@ function Cards(){
         });
 
     },[cardTotalCategories]);
-
-
     
-
-
-
-    
-
-
-   
 
     const cartUsers = {
         title:'Total de usuarios',
@@ -90,8 +81,6 @@ function Cards(){
         cuantity:cardTotalCategories,
         icon:'tag-fill.svg'
     }
-
-
 
 
     let cartProps = [cartUsers, cardTotalProductos,cardTotalCategorias];

@@ -31,22 +31,19 @@ function LastUserCreated(){
         <div className="col-lg-6 mb-4">
             <div className="card shadow mb-4">
                 <div className="card-header py-3">
-                <span className="m-0 font-weight-bold text-gray-800">Ultimo usuario registrado</span>
-                    <h5 className="m-0 font-weight-bold text-gray-800">{user.name + " " + user.lastName}</h5>
+                <span className="m-0 font-weight-bold text-black-800">Último usuario registrado</span>
+                    <h5 className="m-0 font-weight text-gray-800">{user.name + " " + user.lastName}</h5>
                     
-
-                    
-
                 </div>
                 <div className="card-body">
                     <div className="text-center">
-                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={user.avatar} alt=" Star Wars - Mandalorian "/>
+                        <img className="img-fluid px-3 px-sm-4 mt-3 mb-4" style={{width: 40 +'rem'}} src={user.avatar} alt=" Foto del usuario"/>
                         <p>{user.email}</p>
                     </div>
                     
                     <Link className="nav-link" to="/ListUsers">
                         
-                        <p className="btn btn-danger text-center" id='actions'>Ver todos</p>
+                        <p className="btn btn-secondary text-center" id='actions'>Ver todos</p>
                         
                     </Link>
                 </div>

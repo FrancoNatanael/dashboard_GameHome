@@ -1,18 +1,19 @@
 #nav{
-    background-color:gainsboro;
+    background-color:rgba(10, 10, 10, 0.963);
 }
 
 #side{
-    background-color:#5529ac;
+    background-color:#770fb8;
 }
 #search{
     border-radius: 8px;   ;
 }
 
 #letra{
-    font-family: Montserrat, sans-serif;;
+    font-family: Montserrat, sans-serif;
+    color:black;
     font-size:150%;
-    text-shadow: 2px 2px 2px #5529ac;
+    text-shadow: 2px 2px 2px #06040b;
 
 }
 
@@ -24,7 +25,10 @@
 }
 
 #inicio{
-    font-family: Montserrat, sans-serif;;
+    font-family: Montserrat, sans-serif;
     padding-left: 7%;
     font-size: 120%;
+}
+#content{
+    background: #ffffffdb;
 }

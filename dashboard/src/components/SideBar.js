@@ -10,17 +10,11 @@ import { FcCustomerSupport, FcBarChart, FcSearch, FcSelfServiceKiosk, FcHome,  F
 import Logo from '../assets/image/logo-174px.ico'
 
 
-
-
-
-
-
-
 function SideBar(){
     return(
         <React.Fragment>
             {/*<!-- Sidebar -->*/}
-            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar" style={{background: "#5529ac"}}>
+            <ul className="navbar-nav bg-gradient-secondary sidebar sidebar-dark accordion" id="accordionSidebar" style={{background: "#8b4eb1", borderRight: "1px solid grey"}}>
 
                 {/*<!-- Sidebar - Brand -->*/}
                 <a className="sidebar-brand d-flex align-items-center justify-content-center" href="/">
@@ -60,9 +54,6 @@ function SideBar(){
                     </Link>
                 </li>
 
-                
-                
-
                
                 <li className="nav-item nav-link">
                 <Link className="nav-link" to="/LastProduct">
@@ -86,7 +77,7 @@ function SideBar(){
                     </Link>
                 </li>
 
-                {/*<!-- Divider -->*/}
+              
                 <hr className="sidebar-divider d-none d-md-block"/>
             </ul>
             
